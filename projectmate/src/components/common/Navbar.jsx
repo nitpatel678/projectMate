@@ -23,7 +23,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-1">
+        <div className="hidden md:flex items-center space-x-1 mr-8">
           <div className="bg-black rounded-full px-5 py-2 flex items-center space-x-6 font-poppins">
             <Link
               to="/home"
