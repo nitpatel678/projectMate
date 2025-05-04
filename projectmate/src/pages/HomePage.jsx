@@ -71,20 +71,20 @@ const HomePage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-        <h1 className="text-3xl font-bold text-gray-900">Discover Projects</h1>
-        <SearchBar onSearch={handleSearch} placeholder="Search projects..." className="w-full md:w-96" />
+        <h1 className="text-3xl font-bold text-gray-900 font-geologica">Discover Projects</h1>
+        <SearchBar onSearch={handleSearch} placeholder="Search projects..." className="w-full md:w-96 font-calibri" />
       </div>
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* Filters - Desktop */}
         <div className="hidden md:block w-64 bg-white rounded-xl shadow-sm p-6 h-fit sticky top-20">
-          <h2 className="text-lg font-semibold mb-4">Filters</h2>
+          <h2 className="text-lg font-semibold mb-4 font-geologica">Filters</h2>
 
           <div className="space-y-6">
             <div>
-              <h3 className="text-sm font-medium mb-2">Category</h3>
+              <h3 className="text-sm font-medium mb-2 font-poppins">Category</h3>
               <select
-                className="input"
+                className="input font-poppins"
                 value={filters.category}
                 onChange={(e) => handleFilterChange("category", e.target.value)}
               >
@@ -98,7 +98,7 @@ const HomePage = () => {
             </div>
 
             <div>
-              <h3 className="text-sm font-medium mb-2">Project Type</h3>
+              <h3 className="text-sm font-medium mb-2 font-poppins">Project Type</h3>
               <div className="space-y-2">
                 <label className="flex items-center">
                   <input
@@ -134,7 +134,7 @@ const HomePage = () => {
             </div>
 
             <div>
-              <h3 className="text-sm font-medium mb-2">Skills</h3>
+              <h3 className="text-sm font-medium mb-2 font-poppins">Skills</h3>
               <div className="space-y-2">
                 {skills.map((skill) => (
                   <label key={skill} className="flex items-center">
@@ -160,7 +160,7 @@ const HomePage = () => {
             </div>
 
             <Button
-              variant="outline"
+              variant="orange" className="text-poppins"
               size="sm"
               onClick={() => {
                 setFilters({
@@ -288,10 +288,10 @@ const HomePage = () => {
           {/* Projects Grid/List */}
           {filteredProjects.length === 0 ? (
             <div className="bg-white rounded-xl shadow-sm p-8 text-center">
-              <h3 className="text-lg font-medium text-gray-900 mb-2">No projects found</h3>
-              <p className="text-gray-600 mb-4">Try adjusting your filters or search criteria.</p>
+              <h3 className="text-lg font-medium text-gray-900 mb-2 font-poppins">No projects found</h3>
+              <p className="text-gray-600 mb-4 font-calibri">Try adjusting your filters or search criteria.</p>
               <Button
-                variant="primary"
+                variant="orange"
                 onClick={() => {
                   setFilters({
                     category: "",

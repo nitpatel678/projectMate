@@ -21,16 +21,16 @@ const ProjectCard = ({ project }) => {
     <motion.div whileHover={{ y: -5 }} className="card h-full flex flex-col">
       <Link to={`/projects/${id}`} className="flex flex-col h-full">
         <div className="p-5 flex flex-col flex-grow">
-          <div className="flex justify-between items-start mb-3">
+          <div className="flex justify-between items-start mb-3 font-poppins">
             <Badge variant={isPaid ? "success" : "info"}>
               {isPaid ? "Paid" : "Free"}
             </Badge>
             <Badge variant="secondary">{category}</Badge>
           </div>
 
-          <h3 className="text-lg font-semibold mb-2 text-gray-900">{title}</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 font-geologica">{title}</h3>
 
-          <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+          <p className="text-gray-600 text-sm mb-4 line-clamp-2 font-calibri">
             {description}
           </p>
 
@@ -44,12 +44,12 @@ const ProjectCard = ({ project }) => {
 
             <div className="flex items-center text-sm text-gray-600">
               <Calendar size={16} className="mr-2 text-primary" />
-              <span>Deadline: {new Date(deadline).toLocaleDateString()}</span>
+              <span className="font-poppins">Deadline: {new Date(deadline).toLocaleDateString()}</span>
             </div>
 
             <div className="flex items-center text-sm text-gray-600">
               <Users size={16} className="mr-2 text-primary" />
-              <span>Team Size: {teamSize}</span>
+              <span className="font-poppins">Team Size: {teamSize}</span>
             </div>
           </div>
         </div>
@@ -61,14 +61,14 @@ const ProjectCard = ({ project }) => {
               alt={createdBy.name}
               className="w-8 h-8 rounded-full mr-2 object-cover"
             />
-            <span className="text-sm font-medium">{createdBy.name}</span>
+            <span className="text-sm font-medium font-poppins">{createdBy.name}</span>
           </div>
 
           <div className="flex space-x-1">
             {requiredSkills.slice(0, 2).map((skill, index) => (
               <span
                 key={index}
-                className="inline-block bg-gray-200 rounded-full px-2 py-0.5 text-xs text-gray-700"
+                className="inline-block font-poppins bg-gray-200 rounded-full px-2 py-0.5 text-xs text-gray-700"
               >
                 {skill}
               </span>
