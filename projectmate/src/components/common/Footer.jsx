@@ -10,7 +10,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center mb-4">
               <h2 className="text-xl font-bold">Project Mate</h2>
             </Link>
-            <p className="text-gray-300 text-sm mb-4 font-poppins text-gray-600">
+            <p className="text-sm mb-4 font-poppins text-gray-600">
               Connect, collaborate, and create amazing projects with talented individuals from around the world.
             </p>
             <div className="flex space-x-4">
