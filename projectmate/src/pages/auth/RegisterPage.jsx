@@ -90,14 +90,14 @@ const RegisterPage = () => {
         className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-sm"
       >
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900">Create an account</h2>
-          <p className="mt-2 text-gray-600">Join Project Mate to find collaborators and exciting projects</p>
+          <h2 className="text-3xl font-bold text-gray-900 font-geologica">Create an account</h2>
+          <p className="mt-2 text-gray-600 font-poppins">Join Project Mate to find collaborators and exciting projects</p>
         </div>
 
         {error && <div className="bg-red-50 text-red-700 p-3 rounded-lg text-sm">{error}</div>}
 
         <form className="mt-8 space-y-6" onSubmit={handleSubmit(onSubmit)}>
-          <div className="space-y-4">
+          <div className="space-y-4 font-poppins">
             <Input
               label="Full Name"
               id="name"
@@ -169,18 +169,18 @@ const RegisterPage = () => {
               />
               <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
                 I agree to the{" "}
-                <a href="#" className="font-medium text-primary hover:text-primary-dark">
+                <a  className="font-medium text-primary hover:text-primary-dark">
                   Terms of Service
                 </a>{" "}
                 and{" "}
-                <a href="#" className="font-medium text-primary hover:text-primary-dark">
+                <a  className="font-medium text-primary hover:text-primary-dark">
                   Privacy Policy
                 </a>
               </label>
             </div>
           </div>
 
-          <Button type="submit" variant="primary" fullWidth disabled={isLoading}>
+          <Button type="submit" variant="orange" className='font-poppins' fullWidth disabled={isLoading}>
             {isLoading ? "Creating account..." : "Create account"}
           </Button>
 
@@ -189,7 +189,7 @@ const RegisterPage = () => {
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white text-gray-500">Or continue with</span>
+              <span className="px-2 bg-white text-gray-500 font-calibri">Or continue with</span>
             </div>
           </div>
 
@@ -207,9 +207,9 @@ const RegisterPage = () => {
         </form>
 
         <div className="text-center mt-4">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 font-poppins">
             Already have an account?{" "}
-            <Link to="/login" className="font-medium text-primary hover:text-primary-dark">
+            <Link to="/login" className="font-bold text-primary hover:text-primary-dark">
               Sign in
             </Link>
           </p>

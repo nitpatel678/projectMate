@@ -75,7 +75,7 @@ const Sidebar = () => {
       <div className="p-4 border-b border-gray-200 flex items-center justify-between">
         {!isCollapsed && (
           <Link to="/" className="flex items-center">
-            <h1 className="text-xl font-bold text-gray-900">Project Mate</h1>
+            <h1 className="text-xl font-bold text-gray-900 font-montserrat tracking-wide">Project Mate</h1>
           </Link>
         )}
         <button
@@ -84,7 +84,7 @@ const Sidebar = () => {
         >
           <ChevronRight
             size={20}
-            className={`transform transition-transform ${isCollapsed ? "rotate-180" : ""}`}
+            className={`transform transition-transform ${isCollapsed ? "rotate-180" : ""} text-orange-400`}
           />
         </button>
       </div>
@@ -100,8 +100,8 @@ const Sidebar = () => {
                   ${isActive(item.path) ? "bg-primary text-white" : "text-gray-700 hover:bg-gray-100"}
                 `}
               >
-                <item.icon size={20} className={isCollapsed ? "mx-auto" : "mr-3"} />
-                {!isCollapsed && <span>{item.title}</span>}
+                <item.icon size={20} className={`text-orange-400 ${isCollapsed ? "mx-auto" : "mr-3"}`} />
+                {!isCollapsed && <span className="font-poppins">{item.title}</span>}
               </Link>
             </li>
           ))}
@@ -113,8 +113,8 @@ const Sidebar = () => {
           onClick={logout}
           className="flex items-center p-2 w-full rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
         >
-          <LogOut size={20} className={isCollapsed ? "mx-auto" : "mr-3"} />
-          {!isCollapsed && <span>Logout</span>}
+          <LogOut size={20} className={`text-orange-400 ${isCollapsed ? "mx-auto" : "mr-3"}`} />
+          {!isCollapsed && <span className="font-poppins">Logout</span>}
         </button>
       </div>
     </motion.div>

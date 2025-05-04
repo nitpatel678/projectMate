@@ -62,7 +62,7 @@ const Navbar = () => {
                   Dashboard
                 </Button>
               </Link>
-              <Button onClick={logout} variant="primary">
+              <Button onClick={logout} variant="orange" className='font-poppins'>
                 Log Out
               </Button>
             </div>

@@ -78,14 +78,14 @@ const LoginPage = () => {
         className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-sm"
       >
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900">Welcome back</h2>
-          <p className="mt-2 text-gray-600">Sign in to your account to continue</p>
+          <h2 className="text-3xl font-bold text-gray-900 font-geologica">Welcome back</h2>
+          <p className="mt-2 text-gray-600 font-poppins">Sign in to your account to continue</p>
         </div>
 
         {error && <div className="bg-red-50 text-red-700 p-3 rounded-lg text-sm">{error}</div>}
 
         <form className="mt-8 space-y-6" onSubmit={handleSubmit(onSubmit)}>
-          <div className="space-y-4">
+          <div className="space-y-4 font-poppins">
             <Input
               label="Email Address"
               id="email"
@@ -125,7 +125,7 @@ const LoginPage = () => {
             </div>
           </div>
 
-          <Button type="submit" variant="primary" fullWidth disabled={isLoading}>
+          <Button type="submit" variant="orange" className="font-poppins" fullWidth disabled={isLoading}>
             {isLoading ? "Signing in..." : "Sign in"}
           </Button>
 
@@ -134,7 +134,7 @@ const LoginPage = () => {
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white text-gray-500">Or continue with</span>
+              <span className="px-2 bg-white text-gray-500 font-calibri">Or continue with</span>
             </div>
           </div>
 
@@ -151,10 +151,10 @@ const LoginPage = () => {
           </div>
         </form>
 
-        <div className="text-center mt-4">
+        <div className="text-center font-poppins mt-4">
           <p className="text-sm text-gray-600">
             Don't have an account?{" "}
-            <Link to="/register" className="font-medium text-primary hover:text-primary-dark">
+            <Link to="/register" className="font-bold text-primary hover:text-primary-dark">
               Sign up
             </Link>
           </p>
