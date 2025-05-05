@@ -27,6 +27,8 @@ import NotFoundPage from "./pages/NotFoundPage"
 
 // Auth Provider
 import { AuthProvider } from "./contexts/AuthContext"
+import ProfilePage from "./pages/ProfilePage"
+import CategoriesPage from "./pages/CategoriesPage"
 
 function App() {
   return (
@@ -40,9 +42,10 @@ function App() {
                 <Route index element={<LandingPage />} />
                 <Route path="login" element={<LoginPage />} />
                 <Route path="register" element={<RegisterPage />} />
+                <Route path="categories" element={<CategoriesPage />} />
                 <Route path="home" element={<HomePage />} />
                 <Route path="projects/:id" element={<ProjectDetailPage />} />
-                {/* <Route path="profile/:id" element={<ProfilePage />} /> */}
+                <Route path="profile/" element={<ProfilePage />} />
               </Route>
 
               {/* Protected Routes */}

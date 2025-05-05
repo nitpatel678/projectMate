@@ -103,12 +103,12 @@ const ProjectDetailPage = () => {
       >
         <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
           <div>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2 mb-2 font-poppins">
               <Badge variant={isPaid ? "success" : "info"}>{isPaid ? "Paid" : "Free"}</Badge>
               <Badge variant="secondary">{category}</Badge>
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">{title}</h1>
-            <p className="text-gray-600 mb-4">{description}</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2 font-poppins">{title}</h1>
+            <p className="text-gray-600 mb-4 font-calibri">{description}</p>
             <div className="flex items-center text-sm text-gray-600">
               <Clock size={16} className="mr-1" />
               <span>Posted {new Date(createdAt).toLocaleDateString()}</span>
@@ -199,14 +199,14 @@ const ProjectDetailPage = () => {
               </div>
             </div>
             <Link to={`/profile/${createdBy.id}`}>
-              <Button variant="outline" size="sm" fullWidth>
+              <Button variant="outline" className="font-poppins" size="sm" fullWidth>
                 View Profile
               </Button>
             </Link>
             {!isCreator && (
               <Button
-                variant="primary"
-                className="mt-2"
+                variant="orange"
+                className="mt-2 font-poppins"
                 fullWidth
                 as="link"
                 to={hasApplied ? "#" : `/dashboard/apply/${id}`}
