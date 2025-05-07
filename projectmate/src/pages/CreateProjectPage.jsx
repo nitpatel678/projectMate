@@ -147,17 +147,17 @@ const CreateProjectPage = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-        <h1 className="text-3xl font-bold mb-6">Create a New Project</h1>
+        <h1 className="text-3xl font-bold mb-6 font-geologica">Create a New Project</h1>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
           <div className="bg-white rounded-xl shadow-sm p-6">
-            <h2 className="text-xl font-semibold mb-4">Basic Information</h2>
+            <h2 className="text-xl font-semibold mb-4 font-poppins">Basic Information</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Input label="Project Title" id="title" error={errors.title?.message} {...register("title")} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins">
+              <Input  label="Project Title" id="title" error={errors.title?.message} {...register("title")} />
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1 font-poppins">Category</label>
                 <select
                   className={`input ${errors.category ? "border-red-500 focus:ring-red-500" : ""}`}
                   {...register("category")}
@@ -248,7 +248,7 @@ const CreateProjectPage = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-6">
-            <h2 className="text-xl font-semibold mb-4">Required Skills</h2>
+            <h2 className="text-xl font-semibold mb-4 font-geologica">Required Skills</h2>
 
             <div className="flex flex-wrap gap-2 mb-4">
               {skills.map((skill) => (
@@ -280,10 +280,10 @@ const CreateProjectPage = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-6">
-            <h2 className="text-xl font-semibold mb-4">Project Details</h2>
+            <h2 className="text-xl font-semibold mb-4 font-geologica">Project Details</h2>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Detailed Description</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1 font-poppins">Detailed Description</label>
               <textarea
                 className={`input min-h-[150px] ${errors.detailedDescription ? "border-red-500 focus:ring-red-500" : ""}`}
                 {...register("detailedDescription")}
@@ -294,7 +294,7 @@ const CreateProjectPage = () => {
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Responsibilities</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1 font-poppins">Responsibilities</label>
               {responsibilities.map((responsibility, index) => (
                 <div key={index} className="flex mb-2">
                   <input
@@ -316,13 +316,13 @@ const CreateProjectPage = () => {
                 </div>
               ))}
               <Button type="button" variant="ghost" size="sm" onClick={addResponsibility} className="mt-2">
-                <Plus size={16} className="mr-1" />
+                <Plus size={16} className="mr-1 font-poppins" />
                 Add Responsibility
               </Button>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Requirements</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1 font-poppins">Requirements</label>
               {requirements.map((requirement, index) => (
                 <div key={index} className="flex mb-2">
                   <input
@@ -344,7 +344,7 @@ const CreateProjectPage = () => {
                 </div>
               ))}
               <Button type="button" variant="ghost" size="sm" onClick={addRequirement} className="mt-2">
-                <Plus size={16} className="mr-1" />
+                <Plus size={16} className="mr-1 font-poppins" />
                 Add Requirement
               </Button>
             </div>

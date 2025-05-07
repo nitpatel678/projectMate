@@ -29,6 +29,8 @@ import NotFoundPage from "./pages/NotFoundPage"
 import { AuthProvider } from "./contexts/AuthContext"
 import ProfilePage from "./pages/ProfilePage"
 import CategoriesPage from "./pages/CategoriesPage"
+import ContactUsPage from "./pages/ContactUsPage"
+import TermsOfServicePage from "./pages/TermsOfServicePage"
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
                 <Route path="home" element={<HomePage />} />
                 <Route path="projects/:id" element={<ProjectDetailPage />} />
                 <Route path="profile/" element={<ProfilePage />} />
+                <Route path="contact" element={<ContactUsPage />} />
+                <Route path="terms" element={<TermsOfServicePage/>} />
               </Route>
 
               {/* Protected Routes */}
